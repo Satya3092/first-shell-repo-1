@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorPop Studio | Vibrant Static Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fdfbff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 8%;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff4b2b, #ff416c, #8e2de2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff416c;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 6rem 10%;
+      background: linear-gradient(135deg, #ff512f 0%, #dd2476 50%, #6a11cb 100%);
+      color: white;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: #ffde59;
+      color: #222;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #ffe885;
+    }
+
+    /* Feature Cards Section */
+    .features {
+      padding: 5rem 8%;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2.3rem;
+      margin-bottom: 2.5rem;
+      color: #2c2c54;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      padding: 2.2rem;
+      border-radius: 20px;
+      color: white;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card-1 { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+    .card-2 { background: linear-gradient(135deg, #f7971e, #ffd200); color: #222; }
+    .card-3 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+    .card-4 { background: linear-gradient(135deg, #fc466b, #3f5efb); }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 4rem 8%;
+      background: #f3e8ff;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #4a148c;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.9rem;
+      border: 2px solid #d1c4e9;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #8e2de2;
+    }
+
+    button {
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #8e2de2, #4a00e0);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1e1e2f;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">ColorPop</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section id="home" class="hero">
+    <h1>Bring Your Ideas to Life in Full Color</h1>
+    <p>A fast, responsive, and vibrant single-page HTML template ready for any creative project.</p>
+    <a href="#features" class="btn">Explore Highlights</a>
+  </section>
+
+  <!-- Colorful Cards -->
+  <section id="features" class="features">
+    <h2>What Makes It Shine</h2>
+    <div class="card-grid">
+      <div class="card card-1">
+        <h3>Ocean Blue</h3>
+        <p>Crisp gradients and clean typography make every section easy to read on any screen size.</p>
+      </div>
+      <div class="card card-2">
+        <h3>Sunny Gold</h3>
+        <p>High-contrast accent buttons and warm tones draw immediate attention to your main message.</p>
+      </div>
+      <div class="card card-3">
+        <h3>Mint Emerald</h3>
+        <p>Lightweight static HTML and CSS ensure instant loading speeds with zero external dependencies.</p>
+      </div>
+      <div class="card card-4">
+        <h3>Electric Berry</h3>
+        <p>Smooth hover animations and responsive grids adapt automatically to phones, tablets, and desktops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact">
+    <h2>Say Hello</h2>
+    <form onsubmit="event.preventDefault(); alert('Thanks for reaching out!');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 ColorPop Studio. Built with HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>
